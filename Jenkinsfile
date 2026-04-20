@@ -33,7 +33,7 @@ pipeline {
                  for ip in $ips; do
                     echo "-----------------------------------------------------"
                     echo "Connecting to $ip"
-                    ssh  -o StrictHostKeyChecking=no -i /home/jenkins/petclinicappkey.pem ubuntu@$ip << EOF
+                    ssh  -o StrictHostKeyChecking=no -i /home/jenkins/petclinicaappkey.pem ubuntu@$ip << EOF
                     sudo aws s3 cp s3://$S3_BUCKET/$BUILD_FILE_NAME $LOCAL_FILE_PATH
                     sudo systemctl restart petclinicapp.service
                     echo "Running command on $ip"
