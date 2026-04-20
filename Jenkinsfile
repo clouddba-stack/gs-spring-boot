@@ -16,7 +16,7 @@ pipeline {
                 sh '''
                 USER=petclinicapp
                 GROUP=petclinicapp
-                S3_BUCKET=petclinicapp
+                S3_BUCKET=petclinicappbala
                 BUILD_FILE_NAME=petclinicapp-v1.jar
                 LOCAL_FILE_PATH=/home/$USER/$BUILD_FILE_NAME
                 aws s3 cp $WORKSPACE/initial/target/$BUILD_FILE_NAME s3://$S3_BUCKET
